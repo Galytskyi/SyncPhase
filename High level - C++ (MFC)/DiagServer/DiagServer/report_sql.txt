@@ -1,0 +1,5 @@
+
+ SELECT `MessageD`.`TIME`, `MessageD`.`MSG`, `MessageD`.`DATE`, `MessageD`.`TIME_CODE`, `Sources`.`NAME`
+ FROM   `Sources` `Sources` INNER JOIN `MessageD` `MessageD` ON `Sources`.`SOURCE_ID`=`MessageD`.`SOURCE_ID`
+ WHERE  (`MessageD`.`TIME_CODE`>=10920284 AND `MessageD`.`TIME_CODE`<=10927304)
+

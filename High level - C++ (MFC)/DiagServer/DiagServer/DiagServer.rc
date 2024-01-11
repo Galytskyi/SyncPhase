@@ -1,0 +1,561 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)\r\n"
+    "LANGUAGE 25, 1\r\n"
+    "#pragma code_page(1251)\r\n"
+    "#include ""res\\DiagServer.rc2""  // ресурсы, не редактируемые в Microsoft Visual C++\r\n"
+    "#include ""l.RUS\\afxres.rc""      // Стандартные компоненты\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\DiagServer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 60
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "О проекте DiagServer"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,15,21,20
+    DEFPUSHBUTTON   "ОК",IDOK,60,39,50,14,WS_GROUP
+    LTEXT           "",IDC_INFO_COMMAND_VERSION,42,16,121,19
+END
+
+IDD_DIAG_SERVER DIALOGEX 0, 0, 507, 245
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Диагностический сервер"
+MENU IDR_MAIN_MENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_TAB,"SysTabControl32",0x0,7,7,493,219
+END
+
+IDD_TAB_SOURCE DIALOGEX 0, 0, 243, 156
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_SOURCES_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,1,1,241,154
+END
+
+IDD_SOURCE DIALOGEX 0, 0, 206, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Источник"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "COM-порт:",IDC_STATIC,7,9,38,8
+    COMBOBOX        IDC_SOURCE_COM,47,7,48,142,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Описание:",IDC_STATIC,7,26,36,8
+    EDITTEXT        IDC_SOURCE_DESCRIPTION,45,24,154,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,93,44,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,147,44,50,14
+END
+
+IDD_TAB_MESSAGE DIALOGEX 0, 0, 243, 156
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_MESSAGES_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,1,1,241,154
+END
+
+IDD_TAB_DIAG_DISCRETE DIALOGEX 0, 0, 243, 156
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_DIAG_DISCRETE_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,1,1,241,154
+END
+
+IDD_TAB_EEPROM DIALOGEX 0, 0, 243, 156
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_EEPROM_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,1,1,241,154
+END
+
+IDD_TAB_DIAG_ANALOG DIALOGEX 0, 0, 243, 156
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_DIAG_ANALOG_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,1,1,241,154
+END
+
+IDD_DISCRETE_STATE DIALOGEX 0, 0, 141, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Изменить стотояние"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Выберите стотояние:",-1,7,9,74,8
+    CTEXT           "( НЕТ / ДА)",-1,7,17,66,8
+    COMBOBOX        IDC_DISCRETE_STATE,85,8,48,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,18,41,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,72,41,50,14
+END
+
+IDD_EEPROM_PARAM_STATE DIALOGEX 0, 0, 141, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Значение параметра"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Введите значение:",IDC_STATIC,7,13,66,8
+    CTEXT           "( пределы 0- 255)",IDC_STATIC,7,21,66,8
+    EDITTEXT        IDC_EEPROM_BYTE_DEC,78,7,40,14,ES_AUTOHSCROLL
+    LTEXT           "Dec",IDC_STATIC,121,9,13,8
+    EDITTEXT        IDC_EEPROM_BYTE_HEX,78,23,40,14,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "Hex",IDC_STATIC,120,25,14,8
+    DEFPUSHBUTTON   "OK",IDOK,18,41,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,72,41,50,14
+END
+
+IDD_REPORT DIALOGEX 0, 0, 507, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Отчет"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "От",IDC_REPORT_DATE_FROM_H,7,10,10,8
+    CONTROL         "",IDC_REPORT_DATE_FROM,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,22,7,61,15
+    CONTROL         "",IDC_REPORT_TIME_FROM,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,88,7,48,15
+    LTEXT           "до",IDC_REPORT_DATE_TO_H,144,10,10,8
+    CONTROL         "",IDC_REPORT_DATE_TO,"SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,159,7,61,15
+    CONTROL         "",IDC_REPORT_TIME_TO,"SysDateTimePick32",DTS_RIGHTALIGN | DTS_UPDOWN | WS_TABSTOP | 0x8,225,7,48,15
+    PUSHBUTTON      "Обновить",ID_REPORT_UPDATE,287,7,50,14
+    CONTROL         "",IDC_REPORT_VIEWER,
+                    "{548C6316-751F-4B34-B8D9-A56FCEE53BC8}",WS_TABSTOP,7,28,493,211
+END
+
+IDD_ANALOG_INPUT DIALOGEX 0, 0, 244, 129
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Аналоговый вход"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Наименование входа:",-1,7,9,75,8
+    EDITTEXT        IDC_ANALOG_INPUT_DESCRIPTION,84,7,153,14,ES_AUTOHSCROLL
+    LTEXT           "Нижнее значение диапазона преобзарования:",-1,7,31,161,8
+    EDITTEXT        IDC_ANALOG_INPUT_LOW_LIMIT,181,28,48,14,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Верхнее значение диапазона преобзарования:",-1,7,50,160,8
+    EDITTEXT        IDC_ANALOG_INPUT_HIGH_LIMIT,181,48,48,14,ES_CENTER | ES_AUTOHSCROLL
+    LTEXT           "Единицы измерения диапазона преобзарования:",-1,7,71,166,8
+    EDITTEXT        IDC_ANALOG_INPUT_UNIT,181,68,56,14,ES_CENTER | ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,69,108,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,123,108,50,14
+    LTEXT           "Точность (кол.знаков после запятой) диапазона:",-1,7,90,169,8
+    EDITTEXT        IDC_ANALOG_INPUT_PRECISE,181,88,48,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_DISCRETE_INPUT DIALOGEX 0, 0, 244, 73
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Дисретный вход"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Наименование входа:",-1,7,9,75,8
+    EDITTEXT        IDC_DISCRETE_INPUT_DESCRIPTION,84,7,153,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,67,52,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,121,52,50,14
+    COMBOBOX        IDC_DISCRETE_INPUT_SIGNALING_TYPE,84,25,89,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Сигнализация:",-1,31,27,51,8
+END
+
+IDD_EEPROM_PARAM DIALOGEX 0, 0, 244, 73
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Энергонезависимая память"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Тип параметра:",-1,7,9,54,8
+    COMBOBOX        IDC_EEPROM_PARAM_TYPE,100,7,105,126,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Наименование параметра:",-1,7,24,90,8
+    EDITTEXT        IDC_EEPROM_PARAM_DESCRIPTION,101,23,136,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,67,52,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,121,52,50,14
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 320, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Настройки"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,209,161,50,14
+    PUSHBUTTON      "Отмена",IDCANCEL,263,161,50,14
+    CONTROL         "",IDC_OPTIONS_TAB,"SysTabControl32",0x0,7,7,306,149
+END
+
+IDD_OPTIONS_TAB_APP_TYPE DIALOGEX 0, 0, 177, 79
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "Сервер",ID_OTAT_SERVER,"Button",BS_AUTORADIOBUTTON,7,7,41,10
+    CONTROL         "Клиент",ID_OTAT_CLIENT,"Button",BS_AUTORADIOBUTTON,7,22,41,10
+    LTEXT           "IP адрес сервера:",IDC_STATIC,7,42,62,8
+    CONTROL         "",ID_OTAT_SERVER_IP,"SysIPAddress32",WS_TABSTOP,70,39,100,15
+    LTEXT           "Порт сервера:",IDC_STATIC,7,60,50,8
+    EDITTEXT        ID_OTAT_SERVER_PORT,70,58,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_TAB_SOCKETS DIALOGEX 0, 0, 243, 156
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_SOCKETS_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | LVS_ALIGNLEFT | LVS_OWNERDATA | WS_BORDER | WS_TABSTOP,1,1,241,154
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041904e3"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Название организации>"
+            VALUE "FileDescription", "TODO: <Описание файла>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "DiagServer.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Название организации>. Все права защищены."
+            VALUE "OriginalFilename", "DiagServer.exe"
+            VALUE "ProductName", "TODO: <Название продукта>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x419, 1251
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    IDD_DIAG_SERVER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 500
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 226
+    END
+
+    IDD_TAB_SOURCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 242
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_SOURCE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 199
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_TAB_MESSAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 242
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_TAB_DIAG_DISCRETE, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 242
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_TAB_EEPROM, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 242
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_TAB_DIAG_ANALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 242
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 155
+    END
+
+    IDD_DISCRETE_STATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_EEPROM_PARAM_STATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 134
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_REPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 500
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_ANALOG_INPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+
+    IDD_DISCRETE_INPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_EEPROM_PARAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 237
+        VERTGUIDE, 101
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_OPTIONS_TAB_APP_TYPE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 72
+    END
+
+    IDD_TAB_SOCKETS, DIALOG
+    BEGIN
+        LEFTMARGIN, 1
+        RIGHTMARGIN, 242
+        TOPMARGIN, 1
+        BOTTOMMARGIN, 155
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAIN_MENU MENU 
+BEGIN
+    POPUP "Источники"
+    BEGIN
+        MENUITEM "Создать ...",                 ID_CREATE_SOURCE
+        MENUITEM "Редакстировать ...",          ID_EDIT_SOURCE
+        MENUITEM "Удалить",                     ID_DELETE_SOURCE
+    END
+    POPUP "Сообщения"
+    BEGIN
+        MENUITEM "Начать прием",                ID_START_RECV_MSG
+        MENUITEM "Остановить прием",            ID_STOP_RECV_MSG
+        MENUITEM SEPARATOR
+        MENUITEM "Очистить",                    ID_MSG_ARRAY_CLEAR
+        MENUITEM "Автопрокрутка",               ID_AUTO_ENSURE_MSG
+    END
+    POPUP "Входы"
+    BEGIN
+        POPUP "Дискретные"
+        BEGIN
+            MENUITEM "Изменить состояние ...",      ID_CHANGE_DISCRETE_STATE
+            MENUITEM "Обновить состония вход / выход", ID_UPDATE_DISCRETE_IO
+            MENUITEM SEPARATOR
+            MENUITEM "Редактировать ...",           ID_EDIT_DISCRETE_INPUT
+        END
+        POPUP "Аналоговые"
+        BEGIN
+            MENUITEM "Редактировать ...",           ID_EDIT_ANALOG_INPUT
+        END
+    END
+    POPUP "Энергонезависимая память"
+    BEGIN
+        MENUITEM "Изменить значение параметра", ID_CHANGE_EEPROM_PARAM_STATE
+        MENUITEM "Обновить значение параметров", ID_UPDATE_EEPROM_PARAM
+        MENUITEM SEPARATOR
+        MENUITEM "Редактировать ...",           ID_EDIT_EEPROM_PARAM
+    END
+    POPUP "Вид"
+    BEGIN
+        MENUITEM "Отчет ...",                   ID_REPORT
+        MENUITEM "Настройки ...",               32812
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_REPORT DLGINIT
+BEGIN
+    IDC_REPORT_VIEWER, 0x376, 118, 0
+0x0000, 0x0000, 0x0900, 0x0000, 0x4c7b, 0x0000, 0x2373, 0x0000, 0x000b, 
+0xffff, 0x000b, 0xffff, 0x000b, 0xffff, 0x000b, 0xffff, 0x000b, 0xffff, 
+0x000b, 0xffff, 0x000b, 0xffff, 0x000b, 0x0000, 0x000b, 0xffff, 0x000b, 
+0xffff, 0x000b, 0xffff, 0x000b, 0x0000, 0x000b, 0x0000, 0x000b, 0x0000, 
+0x000b, 0xffff, 0x000b, 0xffff, 0x000b, 0xffff, 0x000b, 0xffff, 0x0008, 
+0x0000, 0x0000, 0x000b, 0x0000, 0x000b, 0xffff, 0x000b, 0x0000, 0x000b, 
+0x0000, 0x000b, 0x0000, 0x000b, 0xffff, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&О проекте DiagServer..."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Диагностический сервер"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE 25, 1
+#pragma code_page(1251)
+#include "res\DiagServer.rc2"  // ресурсы, не редактируемые в Microsoft Visual C++
+#include "l.RUS\afxres.rc"      // Стандартные компоненты
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
